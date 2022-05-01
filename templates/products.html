@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
   <head>
 
     <meta charset="utf-8">
@@ -12,19 +12,13 @@
     <title>Sixteen Clothing Products</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--
+    <link href="{% static '/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-TemplateMo 546 Sixteen Clothing
-
-https://templatemo.com/tm-546-sixteen-clothing
-
--->
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static '/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static '/css/owl.css' %}">
 
   </head>
 
@@ -40,35 +34,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     </div>  
     <!-- ***** Preloader End ***** -->
 
-    <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li> 
-              <li class="nav-item active">
-                <a class="nav-link" href="products.html">Our Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    {% include 'details/navbar.html' %}
 
     <!-- Page Content -->
     <div class="page-heading products-heading header-text">
@@ -103,7 +69,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <div class="row grid">
                     <div class="col-lg-4 col-md-4 all des">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_01.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$18.25</h6>
@@ -121,7 +87,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                     <div class="col-lg-4 col-md-4 all dev">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_02.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$16.75</h6>
@@ -139,7 +105,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                     <div class="col-lg-4 col-md-4 all gra">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_03.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$32.50</h6>
@@ -157,7 +123,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                     <div class="col-lg-4 col-md-4 all gra">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_04.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$24.60</h6>
@@ -175,7 +141,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                     <div class="col-lg-4 col-md-4 all dev">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_05.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$18.75</h6>
@@ -193,7 +159,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </div>
                     <div class="col-lg-4 col-md-4 all des">
                       <div class="product-item">
-                        <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
+                        <a href="#"><img src="{% static '/images/product_06.jpg' %}" alt=""></a>
                         <div class="down-content">
                           <a href="#"><h4>Tittle goes here</h4></a>
                           <h6>$12.50</h6>
@@ -242,16 +208,16 @@ https://templatemo.com/tm-546-sixteen-clothing
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static '/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+    <script src="{% static '/js/owl.js' %}"></script>
+    <script src="{% static '/js/slick.js' %}"></script>
+    <script src="{% static '/js/isotope.js' %}"></script>
+    <script src="{% static '/js/accordions.js' %}"></script>
 
 
     <script language = "text/Javascript"> 
