@@ -34,6 +34,10 @@
   
   {% include 'details/navbar.html' %}
   
+  {% for ip in ips %}
+  <h1>{{ip}}</h1>
+  {% endfor %}
+
   <!-- Page Content -->
   <!-- Banner Starts Here -->
   <div class="banner header-text">
