@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(HomeSlider)
 admin.site.register(ProductsList)
 admin.site.register(ProductsCategory)
+admin.site.register(Team)

@@ -31,3 +31,20 @@ class ProductsList(models.Model):
 
     def __str__(self):
         return self.name
+
+class Team(models.Model):
+    class Meta():
+        verbose_name = 'Team'
+        verbose_name_plural = 'Teams'
+
+    fullname = models.CharField(max_length=50)
+    job = models.CharField(max_length=20)
+    about = models.TextField()
+    facebook_link = models.URLField()
+    twitter_link = models.URLField()
+    linkedin_link = models.URLField()
+    behance_link = models.URLField()
+    image = models.ImageField()
+
+    def __str__(self):
+        return self.name
