@@ -19,6 +19,9 @@ class HomeSlider(models.Model):
     description = models.CharField(max_length=50)
     image = models.ImageField()
 
+    def __str__(self):
+        return self.name
+
 class ProductsList(models.Model):
     class Meta():
         verbose_name = 'Product list'
