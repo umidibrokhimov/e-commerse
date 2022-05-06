@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static '/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static '/css/owl.css' %}">
+</head>
+<body>
+    {% include 'details/navbar.html' %}
+    
+    {% block content %}
+    
+    {% endblock %}
+    
+</body>
+</html>
