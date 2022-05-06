@@ -6,11 +6,22 @@ class Home(ListView):
     queryset = HomeSlider.objects.all()
     context_object_name = 'slides'
 
-class About(TemplateView):
+class About(ListView):
     template_name = 'about.html'
+    queryset = Team.objects.all()
+    context_object_name = 'teams'
 
-class Products(TemplateView):
+class Products(ListView):
     template_name = 'products.html'
+
+    def get_queryset(self):
+        return HomeSlider.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(Products, self).get_context_data(**kwargs)
+        context['categories'] = ProductsCategory.objects.all()
+        context['products'] = ProductsList.objects.all()
+        return context
 
 class ProductDetail(DetailView):
     template_name = 'product-detail.html'

@@ -6,9 +6,10 @@ class ProductsCategory(models.Model):
         verbose_name_plural = 'Products categories'
     
     name = models.CharField(max_length=20)
+    asd = models.CharField(max_length=12)
 
     def __str__(self):
-        return self.name
+        return self.asd
 
 class HomeSlider(models.Model):
     class Meta():
@@ -31,6 +32,7 @@ class ProductsList(models.Model):
     description = models.TextField()
     price = models.IntegerField()
     category = models.OneToOneField(ProductsCategory, on_delete=models.CASCADE)
+    image = models.ImageField()
 
     def __str__(self):
         return self.name
@@ -43,11 +45,11 @@ class Team(models.Model):
     fullname = models.CharField(max_length=50)
     job = models.CharField(max_length=20)
     about = models.TextField()
-    facebook_link = models.URLField()
-    twitter_link = models.URLField()
-    linkedin_link = models.URLField()
-    behance_link = models.URLField()
+    facebook_link = models.URLField(blank=True)
+    twitter_link = models.URLField(blank=True)
+    linkedin_link = models.URLField(blank=True)
+    behance_link = models.URLField(blank=True)
     image = models.ImageField()
 
     def __str__(self):
-        return self.name
+        return self.fullname
