@@ -77,8 +77,8 @@ DATABASES = {
     'default': {
         # 'NAME': BASE_DIR / 'db.sqlite3',
 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd2mr8okvuvnvh',
-        'ENGINE': 'django.db.backends.postgresql_pycopg2',
         'PASSWORD': 'd736190501f5286e0ebdcb4e668de256c53ba2f629276531b905bcd2ebb94ad4',
         'USER': 'hgtxjujngleygl',
         'HOST': 'ec2-54-164-40-66.compute-1.amazonaws.com',
