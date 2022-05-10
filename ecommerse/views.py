@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import *
 
@@ -12,7 +13,7 @@ class Home(ListView):
         context = super(Home, self).get_context_data(**kwargs)
         # here we can add so many context using that way
         context['slides'] = HomeSlider.objects.all()
-        context['products'] = ProductsList.category.filter()
+        context['products'] = ProductsList.objects.filter(category__name='top_category')
         return context
 
 class About(ListView):
