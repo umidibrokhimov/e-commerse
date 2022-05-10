@@ -23,7 +23,7 @@ SECRET_KEY = '665dy_gxnvycs%k-xu7cdx!%h9wyayb@-yc+38k0y(s15=xwvj'
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'ecommerse-tutorial.herokuapp.com']
 
 
 # Application definition
@@ -75,8 +75,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+
+        'NAME': 'd2mr8okvuvnvh',
+        'ENGINE': 'django.db.backends.postgresql_pycopg2',
+        'PASSWORD': 'd736190501f5286e0ebdcb4e668de256c53ba2f629276531b905bcd2ebb94ad4',
+        'USER': 'hgtxjujngleygl',
+        'HOST': 'ec2-54-164-40-66.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
