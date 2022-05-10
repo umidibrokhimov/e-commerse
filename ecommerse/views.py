@@ -13,7 +13,7 @@ class Home(ListView):
         context = super(Home, self).get_context_data(**kwargs)
         # here we can add so many context using that way
         context['slides'] = HomeSlider.objects.all()
-        context['products'] = ProductsList.objects.filter(category__name='top_category')
+        context['products'] = ProductsList.objects.filter(category__name='top')
         return context
 
 class About(ListView):
